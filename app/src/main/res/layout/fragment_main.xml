@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question"
+        android:visibility="visible"
+        app:el_duration="700"
+        app:el_expanded="false">
+
+        <FrameLayout
+            android:id="@+id/scan"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@drawable/grey_base_gradient"
+        android:layout_height="10dp"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextHint"
+                app:hintTextAppearance="@color/colorAccent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name"
+                    android:backgroundTint="#e6e6e6"
+                    android:hint="Name"
+                    android:enabled="false"
+                    android:textColor="@drawable/enable"
+                    android:textColorHint="#4a4a4a"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextHint"
+                app:hintTextAppearance="@color/colorAccent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#e6e6e6"
+                    android:hint="Order by"
+                    android:id="@+id/order"
+                    android:enabled="false"
+                    android:textColor="@drawable/enable"
+                    android:textColorHint="#4a4a4a"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextHint"
+                app:hintTextAppearance="@color/colorAccent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#e6e6e6"
+                    android:hint="Location"
+                    android:enabled="false"
+                    android:id="@+id/location"
+                    android:textColor="@drawable/enable"
+                    android:textColorHint="#4a4a4a"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextHint"
+                app:hintTextAppearance="@color/colorAccent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#e6e6e6"
+                    android:hint="Product"
+                    android:id="@+id/product"
+                    android:enabled="false"
+                    android:textColor="@drawable/enable"
+                    android:textColorHint="#4a4a4a"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/extra_root"
+                android:theme="@style/EditTextHint"
+                app:hintTextAppearance="@color/colorAccent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#e6e6e6"
+                    android:hint="Extra info"
+                    android:id="@+id/extra"
+                    android:enabled="false"
+                    android:textColor="@drawable/enable"
+                    android:textColorHint="#4a4a4a"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextHint"
+                android:id="@+id/count_root"
+                app:hintTextAppearance="@color/colorAccent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#e6e6e6"
+                    android:hint="Count"
+                    android:id="@+id/count"
+                    android:singleLine="true"
+                    android:lines="1"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:textColor="@drawable/enable"
+                    android:textColorHint="#4a4a4a"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_radius">
+
+                <Button
+                    style="@style/Button"
+                    android:id="@+id/done"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="true"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
